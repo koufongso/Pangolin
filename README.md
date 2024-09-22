@@ -77,9 +77,15 @@ cd Pangolin
 # Install dependencies (as described above, or your preferred method)
 ./scripts/install_prerequisites.sh recommended
 
-# Configure and build
-cmake -B build
-cmake --build build
+# Configure and build (this doesn't work for me)
+# cmake -B build
+# cmake --build build
+
+# This works for me
+mkdir build
+cd build
+cmake ..
+make
 
 # with Ninja for faster builds (sudo apt install ninja-build)
 cmake -B build -GNinja
